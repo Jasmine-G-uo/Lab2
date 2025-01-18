@@ -54,6 +54,15 @@ int main() {
         WeightedAverage(&students[i], weight);
     }
 
+    // Print student details
+    for (int i = 0; i < 3; i++) {
+        printf("Name: %s\n", students[i].name);
+        printf("Grades: %d, %d, %d\n", students[i].grades[0], students[i].grades[1], students[i].grades[2]);
+        printf("Average: %.2f\n", students[i].average);
+        printf("WeightedAverage: %.2f\n\n", students[i].weightedaverage);
+    }
+
+
     int top = 0;
     for (int i = 1; i < 3; i++){
         if (students[i].weightedaverage > students[top].weightedaverage){
